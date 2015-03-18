@@ -1,0 +1,144 @@
+<grammar version="1.0" xml:lang="fr-FR" mode="voice" root="rulecourses" xmlns="http://www.w3.org/2001/06/grammar" tag-format="semantics/1.0">
+  <rule id="rulecourses" scope="public">
+    <example>Sarah tu es cool</example>
+    <tag>out.action=new Object(); </tag>
+
+    <item>Sarah</item>
+    
+<!--liste des courses -->
+    <one-of>
+	
+	
+          <item>rajoute du lait
+          <tag>out.action.item="du Lait";</tag>
+          </item>
+      
+          <item>rajoute de l'eau
+          <tag>out.action.item="l'eau";</tag>
+          </item>
+      
+          <item>rajoute des Yaourts aux fruits
+          <tag>out.action.item="les Yaourts aux fruits";</tag>
+          </item>
+
+          <item>rajoute de la lessive
+          <tag>out.action.item="la lessive";</tag>
+          </item>
+
+          <item>rajoute la sauce tomate de timothée
+          <tag>out.action.item="la sauce tomate de timothée";</tag>
+          </item>
+
+          <item>rajoute des petits suisses
+          <tag>out.action.item="les petits suisses";</tag>
+          </item>      
+                
+          <item>rajoute de la viande
+          <tag>out.action.item="la viande";</tag>
+          </item>
+
+          <item>rajoute du papier toilette
+          <tag>out.action.item="du papier toilette";</tag>
+          </item>
+      
+		  		<item>rajoute du café
+          <tag>out.action.item="du café";</tag>
+          </item>
+      
+		  		<item>rajoute des oeufs
+          <tag>out.action.item="les oeufs";</tag>
+          </item>
+      
+<!-- etc .....-->
+<!-- Fin liste courses -->
+
+
+<!-- Enleve des item de la liste des courses-->
+    
+          <item>enléve le lait
+          <tag>out.action.item_out="Lait";</tag>
+          </item>    
+      
+          <item>enléve l'eau
+          <tag>out.action.item_out="l'eau";</tag>
+          </item>
+      
+          <item>enléve les petits suisses
+          <tag>out.action.item_out="les petits suisses";</tag>
+          </item>
+      
+          <item>enléve les yaourts aux fruits
+          <tag>out.action.item_out="les yaourts aux fruits";</tag>
+          </item>
+      
+          <item>enléve la sauce tomate de timothée
+          <tag>out.action.item_out="la sauce tomate de timothée";</tag>
+          </item>
+      
+          <item>enléve la lessive
+          <tag>out.action.item_out="la lessive";</tag>
+      		</item>
+      
+      		<item>enléve la viande
+          <tag>out.action.item_out="viande";</tag>
+          </item>
+
+          <item>enléve le papier toilette
+          <tag>out.action.item_out="papier toilette";</tag>
+          </item>
+      
+		  		<item>enléve le café
+          <tag>out.action.item_out="café";</tag>
+          </item>
+		  
+      		<item>enléve les oeufs
+          <tag>out.action.item_out="oeufs";</tag>
+          </item>
+      
+<!-- etc .....-->
+<!-- Fin liste courses -->
+
+
+<!-- Envoie via push -->
+      <item>Envoie moi la liste des courses
+        
+          <tag>out.action.push="liste"; </tag>
+          <tag>out.action.qui="Fred";</tag> <!-- le nom doit être présent dans le plugin push (Prowl) -->
+          
+         
+        </item> 
+
+         <item>Envoie à Fred la liste des courses
+          <tag>out.action.push="liste"; </tag>
+          <tag>out.action.qui="Fred";</tag></item>
+		  
+         
+
+         <item>Envoie à Marie la liste des courses
+            <tag>out.action.push="liste"; </tag>
+            <tag>out.action.qui="Marie";</tag>
+          </item>
+
+<!-- Fin Envoie via push --> 
+
+<!-- Donne a l'oral la liste des courses -->
+          <item>Donne moi la liste des courses
+          <tag>out.action.dismoi="dismoi"; </tag>
+          </item> 
+		  
+<!-- Vide la liste des courses -->		  
+		  <item>Vide la liste des courses
+          <tag>out.action.vide="vide"; </tag>
+          </item> 
+		  <item>Supprime la liste des courses
+          <tag>out.action.vide="vide"; </tag>
+          </item> 
+
+
+    </one-of>
+  <!--<item weight="2">a la liste de course</item>-->
+    
+
+    <tag>out.action._attributes.uri="http://127.0.0.1:8080/sarah/courses";</tag>
+  </rule> 
+</grammar>
